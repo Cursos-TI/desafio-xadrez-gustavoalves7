@@ -10,6 +10,7 @@ int main() {
     int bispo = 5; 
     int torre = 5;  
     int rainha = 8; 
+    int cavalo=3;
 
     printf("Movimentação das Peças:\n");
 
@@ -32,8 +33,29 @@ int main() {
         i++;
     }
 
-    printf("\nFim da execução!\n");
-    // Implementação de Movimentação do Bispo
+    for (int i = 1; i <= cavalo; i++){   
+        printf("\nMovimentação do cavalo\n");
+
+        int baixo=2;
+        do {
+            printf("Passo para baixo\n");
+            baixo--;
+        } while (baixo > 0);
+      
+        int esquerda=1;
+            while (esquerda>0)
+            {
+                printf("Passo para esquerda\n");
+                esquerda--;
+            }
+
+    }
+    
+   
+    return 0;
+}
+
+ // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
 
     // Implementação de Movimentação da Torre
@@ -52,6 +74,3 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
-
-    return 0;
-}
