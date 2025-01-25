@@ -1,38 +1,51 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
+void passobispo(int n) {
+    if (n > 0) {
+        printf("Cima + Direita %d \n ", n);  // Imprime o valor atual de n
+        passobispo(n - 1);  // Chama a si mesma com n - 1
+    }
+}
+
+void passotorre(int n) {
+    if (n > 0) {
+        printf("Direita %d \n ", n);  // Imprime o valor atual de n
+        passotorre(n - 1);  // Chama a si mesma com n - 1
+    }
+}void passorainha(int n) {
+    if (n > 0) {
+        printf("Esquerda %d \n ", n);  // Imprime o valor atual de n
+        passorainha(n - 1);  // Chama a si mesma com n - 1
+    }
+}
+ // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
     // Nível Novato - Movimentação das Peças
     
-    int bispo = 5; 
-    int torre = 5;  
-    int rainha = 8; 
+    
+      
+   
     int cavalo=3;
 
     printf("Movimentação das Peças:\n");
 
     printf("\nMovimentação do Bispo (Diagonal Superior Direita):\n");
-    for (int i = 1; i <= bispo; i++) {
-        printf("Cima + Direita ( %d)\n", i);
-    }
-
+    int bispo = 5;
+    passobispo(bispo) ;
     
     printf("\nMovimentação da Torre (Direita):\n");
-    for (int i = 1; i <= torre; i++) {
-        printf("Direita ( %d)\n", i);
-    }
+    int torre = 5;
+    passotorre(torre) ;
+
+
+    printf("\n\nMovimentação da Rainha (Esquerda):\n");
+     int rainha = 8;
+    passorainha(rainha) ;
 
     
-    printf("\nMovimentação da Rainha (Esquerda):\n");
-    int i = 1; 
-    while (i <= rainha) {
-        printf("Esquerda ( %d)\n", i);
-        i++;
-    }
-
     for (int i = 1; i <= cavalo; i++){   
         printf("\nMovimentação do cavalo\n");
 
